@@ -1,4 +1,5 @@
 Just a fork that fixed some icons regarding the icon pixel shift bug in Omega/Upsilon
+"Fixes" : KhiCAS, Nofrendo, Peanut-GB
 
 # Epsilon
 
