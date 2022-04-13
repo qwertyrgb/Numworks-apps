@@ -6,6 +6,8 @@
 #define SELECTOR_COLOR_FG_SELECT 0x0000
 #define SELECTOR_COLOR_HEAD_BG 0x0000
 #define SELECTOR_COLOR_HEAD_FG 0xFFFF
+#define UNITCIRCLE_COLOR_HEAD_BG 0xFDA6
+#define UNITCIRCLE_COLOR_HEAD_FG 0xFFFF
 
 const char * select_file(const char * extension_to_match, int max_files);
 
