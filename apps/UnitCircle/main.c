@@ -24,7 +24,7 @@ void extapp_main(void) {
     extapp_drawTextLarge("    Unit Circle/Cercle trigo    ", 0, 20 * 0, UNITCIRCLE_COLOR_HEAD_FG, UNITCIRCLE_COLOR_HEAD_BG, false);
     extapp_drawTextLarge("               π/2              ", 0, 20 * 1, 0x0000, 0xFFFF, false);
     extapp_drawTextLarge("        2π/3    |     π/3       ", 0, 20 * 2, 0x0000, 0xFFFF, false);
-    extapp_drawTextLarge("     3π/4  x-π  |   x   π/4     ", 0, 20 * 3, 0x0000, 0xFFFF, false);
+    extapp_drawTextLarge("     3π/4  π-x  |   x   π/4     ", 0, 20 * 3, 0x0000, 0xFFFF, false);
     extapp_drawTextLarge("   5π/6         |         π/6   ", 0, 20 * 4, 0x0000, 0xFFFF, false);
     // extapp_drawTextLarge("                | 1/2 √2/2 √3/2 ", 0, 20 * 5, 0x0000, 0xFFFF, false);
     // extapp_drawTextSmall("I am a simple text that will be used to test t", 0, 20 * 5, 0x0000, 0xFFFF, false);
@@ -32,7 +32,7 @@ void extapp_main(void) {
     extapp_drawTextLarge(" π -π -------------------- 0 2π ", 0, 20 * 6, 0x0000, 0xFFFF, false);
     extapp_drawTextLarge("                |               ", 0, 20 * 7, 0x0000, 0xFFFF, false);
     extapp_drawTextLarge("   7π/6         |        11π/6  ", 0, 20 * 8, 0x0000, 0xFFFF, false);
-    extapp_drawTextLarge("     5π/4  π-x  |  -x   7π/4    ", 0, 20 * 9, 0x0000, 0xFFFF, false);
+    extapp_drawTextLarge("     5π/4  π+x  |  -x   7π/4    ", 0, 20 * 9, 0x0000, 0xFFFF, false);
     extapp_drawTextLarge("        4π/3    |    5π/3       ", 0, 20 * 10, 0x0000, 0xFFFF, false);
     extapp_drawTextLarge("              3π/2              ", 0, 20 * 11, 0x0000, 0xFFFF, false);
 
