@@ -220,7 +220,7 @@ configure:9246: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sec
 configure:9250: $? = 0
 configure:9257: ./conftest
 qemu: uncaught target signal 11 (Segmentation fault) - core dumped
-./configure: line 9259: 21916 Segmentation fault      ./conftest$ac_cv_exeext
+./configure: line 9259: 19061 Segmentation fault      ./conftest$ac_cv_exeext
 configure:9261: $? = 139
 configure:9276: result: yes
 configure:9281: checking for suffix of object files
@@ -306,7 +306,7 @@ configure:9989: checking build system compiler arm-none-eabi-gcc -Os -fdata-sect
 configure:10002: arm-none-eabi-gcc -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs  conftest.c
 configure:10005: $? = 0
 qemu: uncaught target signal 11 (Segmentation fault) - core dumped
-./configure: line 10007: 22013 Segmentation fault      ./a.out
+./configure: line 10007: 19158 Segmentation fault      ./a.out
 ./configure: line 10007: ./b.out: No such file or directory
 ./configure: line 10007: ./a.exe: No such file or directory
 ./configure: line 10007: ./a_out.exe: No such file or directory
@@ -3030,7 +3030,7 @@ configure:24386: $? = 0
 configure:24553: result: IEEE little endian
 configure:24633: checking for alarm
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc8pkaCE.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccVofu2O.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `alarm'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3135,7 +3135,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for attr_get
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccNgLXXH.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccfjZ4YN.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `attr_get'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3244,7 +3244,7 @@ configure:24633: $? = 0
 configure:24633: result: yes
 configure:24633: checking for cputime
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccgoihX4.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccAy49CW.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `cputime'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3350,7 +3350,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for getpagesize
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccC3kYdq.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccyQNpNx.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `getpagesize'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3456,7 +3456,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for getrusage
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccvGYKQr.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccCsXWla.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `getrusage'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3566,7 +3566,7 @@ configure:24633: $? = 0
 configure:24633: result: yes
 configure:24633: checking for getsysinfo
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccIPNNu5.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cciX7Bhk.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `getsysinfo'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3687,7 +3687,7 @@ configure:24633: $? = 0
 configure:24633: result: yes
 configure:24633: checking for mmap
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc82OEcZ.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccme12ix.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `mmap'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3796,7 +3796,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for mprotect
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc1llX8h.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccDe95fK.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `mprotect'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -3909,7 +3909,7 @@ configure:24633: $? = 0
 configure:24633: result: yes
 configure:24633: checking for obstack_vprintf
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cco0JAvO.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccCGmIIV.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `obstack_vprintf'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4019,7 +4019,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for popen
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccDKLW3z.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cceUzljv.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `popen'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4129,7 +4129,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for processor_info
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccnJnO7C.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccsjRXPw.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `processor_info'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4239,7 +4239,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for pstat_getprocessor
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccKEsqG8.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccyp6tmb.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `pstat_getprocessor'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4353,7 +4353,7 @@ configure:24633: $? = 0
 configure:24633: result: yes
 configure:24633: checking for read_real_time
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc9Mj2S2.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc1pbzJU.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `read_real_time'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4464,7 +4464,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for sigaction
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc1tnVoe.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccdKmmtG.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `sigaction'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4575,7 +4575,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for sigaltstack
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccxvlK6m.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccNK5nzs.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `sigaltstack'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4686,7 +4686,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for sigstack
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccfRbLJJ.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccTlBLeU.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `sigstack'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4797,7 +4797,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for syssgi
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccxC92ja.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccew4JLt.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `syssgi'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -4937,7 +4937,7 @@ configure:24633: $? = 0
 configure:24633: result: yes
 configure:24633: checking for sysconf
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccdHEjUe.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccNQzbFJ.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `sysconf'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -5053,7 +5053,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for sysctl
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc3VH7Hh.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc6I2gdn.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `sysctl'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -5169,7 +5169,7 @@ configure: failed program was:
 configure:24633: result: no
 configure:24633: checking for sysctlbyname
 configure:24633: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccpAHu2L.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc5vfx3p.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `sysctlbyname'
 collect2: error: ld returned 1 exit status
 configure:24633: $? = 1
@@ -5289,7 +5289,7 @@ configure:24633: $? = 0
 configure:24633: result: yes
 configure:24649: checking for library containing clock_gettime
 configure:24680: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs   conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cctuxjr5.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccIfJXwS.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `clock_gettime'
 collect2: error: ld returned 1 exit status
 configure:24680: $? = 1

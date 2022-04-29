@@ -121,7 +121,7 @@ extern "C" {
 #endif
   inline int os_draw_string_medium_(int x,int y,const char * s){ return os_draw_string_medium(x,y,SDK_BLACK,SDK_WHITE,s,false);}
   void GetKey(int * key);
-  int getkey(int allow_suspend); // transformed
+  int getkey(bool allow_suspend);
   void enable_back_interrupt();
   inline void set_abort(){  enable_back_interrupt(); }
   void disable_back_interrupt();
@@ -137,7 +137,7 @@ extern "C" {
   void statusline(int mode);
 #endif
 #ifdef NUMWORKS
-  inline bool iskeydown(int key){ return getkey(key | 0x80000000); }
+  inline bool iskeydown(int key);
 #else
   bool iskeydown(int key);
 #endif

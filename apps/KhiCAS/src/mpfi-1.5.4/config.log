@@ -129,7 +129,7 @@ configure:2828: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sec
 configure:2832: $? = 0
 configure:2839: ./conftest
 qemu: uncaught target signal 11 (Segmentation fault) - core dumped
-./configure: line 2841:  9083 Segmentation fault      ./conftest$ac_cv_exeext
+./configure: line 2841:  6227 Segmentation fault      ./conftest$ac_cv_exeext
 configure:2843: $? = 139
 configure:2858: result: yes
 configure:2863: checking for suffix of object files
@@ -347,8 +347,8 @@ configure:4025: checking whether make sets $(MAKE)
 configure:4047: result: yes
 configure:4069: checking whether make supports the include directive
 configure:4084: make -f confmf.GNU && cat confinc.out
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4'
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4'
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4'
 this is the am__doit target
 configure:4087: $? = 0
 configure:4106: result: yes (GNU style)
@@ -795,7 +795,7 @@ configure: failed program was:
 configure:13376: result: yes
 configure:13392: checking for dup2
 configure:13392: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//include -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//include  -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//lib -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//lib  conftest.c -lmpfr -lgmp  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccrAsxDT.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccg750GQ.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `dup2'
 collect2: error: ld returned 1 exit status
 configure:13392: $? = 1
@@ -878,7 +878,7 @@ configure:13392: $? = 0
 configure:13392: result: yes
 configure:13404: checking for mpfr_q_sub
 configure:13404: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//include -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//include  -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//lib -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//lib  conftest.c -lmpfr -lgmp  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccd32sgX.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccCXYAk1.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `mpfr_q_sub'
 collect2: error: ld returned 1 exit status
 configure:13404: $? = 1
@@ -962,7 +962,7 @@ configure:13404: $? = 0
 configure:13404: result: yes
 configure:13404: checking for mpfr_z_div
 configure:13404: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//include -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//include  -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//lib -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/..//lib  conftest.c -lmpfr -lgmp  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cct8Ep1I.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccLrPkI4.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `mpfr_z_div'
 collect2: error: ld returned 1 exit status
 configure:13404: $? = 1
@@ -1068,14 +1068,14 @@ config.status:1104: creating mpfi_config.h
 config.status:1285: mpfi_config.h is unchanged
 config.status:1333: executing depfiles commands
 config.status:1410: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/src'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/src'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/src'
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/src'
 config.status:1415: $? = 0
 config.status:1410: cd tests       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/tests'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/tests'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/tests'
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfi-1.5.4/tests'
 config.status:1415: $? = 0
 config.status:1333: executing libtool commands
 

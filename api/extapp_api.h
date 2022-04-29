@@ -253,6 +253,7 @@ EXTERNC bool extapp_fileWrite(const char * filename, const char * content, size_
 EXTERNC void extapp_lockAlpha();
 EXTERNC void extapp_resetKeyboard();
 EXTERNC int extapp_getKey(int allowSuspend, bool *alphaWasActive);
+EXTERNC bool extapp_isKeydown(int key);
 EXTERNC int extapp_restorebackup(int mode); // currently works only with mode==-1 to restore scriptstore after exam mode
 
 EXTERNC  bool extapp_erasesector(void * ptr);

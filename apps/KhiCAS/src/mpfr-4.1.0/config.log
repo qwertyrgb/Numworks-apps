@@ -159,7 +159,7 @@ configure:4522: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sec
 configure:4526: $? = 0
 configure:4533: ./conftest
 qemu: uncaught target signal 11 (Segmentation fault) - core dumped
-./configure: line 4535: 29524 Segmentation fault      ./conftest$ac_cv_exeext
+./configure: line 4535: 26669 Segmentation fault      ./conftest$ac_cv_exeext
 configure:4537: $? = 139
 configure:4552: result: yes
 configure:4557: checking for suffix of object files
@@ -186,8 +186,8 @@ configure:4849: $? = 0
 configure:4861: result: yes
 configure:4881: checking whether make supports the include directive
 configure:4896: make -f confmf.GNU && cat confinc.out
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0'
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0'
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0'
 this is the am__doit target
 configure:4899: $? = 0
 configure:4918: result: yes (GNU style)
@@ -593,7 +593,7 @@ configure: failed program was:
 configure:13854: result: no
 configure:13877: checking for library containing clock_gettime
 configure:13908: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs  -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/include  -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/lib conftest.c  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccfFwokS.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccxqMkhd.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `clock_gettime'
 collect2: error: ld returned 1 exit status
 configure:13908: $? = 1
@@ -1681,7 +1681,7 @@ configure:18321: $? = 0
 configure:18321: result: yes
 configure:18332: checking for __gmpn_invert_limb
 configure:18332: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs -ffloat-store  -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/include  -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/lib conftest.c -lgmp  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccoT1mkp.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccYzaIF4.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `__gmpn_invert_limb'
 collect2: error: ld returned 1 exit status
 configure:18332: $? = 1
@@ -1778,7 +1778,7 @@ configure: failed program was:
 configure:18332: result: no
 configure:18343: checking for __gmpn_rsblsh1_n
 configure:18343: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs -ffloat-store  -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/include  -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/lib conftest.c -lgmp  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccTP4y0U.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc977MPb.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `__gmpn_rsblsh1_n'
 collect2: error: ld returned 1 exit status
 configure:18343: $? = 1
@@ -1962,7 +1962,7 @@ configure: failed program was:
 configure:18443: result: no
 configure:18523: checking for getrusage
 configure:18523: arm-none-eabi-gcc -o conftest -Os -fdata-sections -ffunction-sections -DNDEBUG -mthumb -march=armv7e-m -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -fno-strict-aliasing --specs=nosys.specs -ffloat-store  -I/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/include  -L/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/lib conftest.c -lgmp  >&5
-/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/cc2NvfsB.o: in function `main':
+/usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/bin/ld: /tmp/ccLkbiiz.o: in function `main':
 conftest.c:(.text.startup.main+0x2): undefined reference to `getrusage'
 collect2: error: ld returned 1 exit status
 configure:18523: $? = 1
@@ -2087,24 +2087,24 @@ config.status:1033: creating src/mparam.h
 config.status:1033: creating tools/bench/Makefile
 config.status:1205: executing depfiles commands
 config.status:1282: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/src'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/src'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/src'
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/src'
 config.status:1287: $? = 0
 config.status:1282: cd tests       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tests'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tests'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tests'
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tests'
 config.status:1287: $? = 0
 config.status:1282: cd tune       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tune'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tune'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tune'
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tune'
 config.status:1287: $? = 0
 config.status:1282: cd tools/bench       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
-make[1]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tools/bench'
-make[1]: Nothing to be done for 'am--depfiles'.
-make[1]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tools/bench'
+make[2]: Entering directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tools/bench'
+make[2]: Nothing to be done for 'am--depfiles'.
+make[2]: Leaving directory '/mnt/c/msys64/home/lauri/Upsilon-External/apps/KhiCAS/src/mpfr-4.1.0/tools/bench'
 config.status:1287: $? = 0
 config.status:1205: executing libtool commands
 
