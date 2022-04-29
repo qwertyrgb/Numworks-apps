@@ -76,7 +76,22 @@ void extapp_resetKeyboard() {
   ((void (*)(void))_api_base[17])();
 }
 
-int extapp_getKey(bool allowSuspend, bool *alphaWasActive) {
-  ((int (*)(bool, bool *))_api_base[18])(allowSuspend, alphaWasActive);
+int extapp_getKey(int allowSuspend, bool *alphaWasActive) {
+  ((int (*)(int, bool *))_api_base[18])(allowSuspend, alphaWasActive);
 }
 
+int extapp_restorebackup(int mode){
+  ((int (*)(int))_api_base[19])(mode);
+}
+
+bool extapp_erasesector(void * ptr){
+  ((bool (*)(void *))_api_base[20])(ptr);
+}
+
+bool extapp_writememory(unsigned char * dest,const unsigned char * data,size_t length){
+  return ((bool (*)(unsigned char *, const unsigned char *, size_t))_api_base[21])(dest,data,length);
+}
+
+bool extapp_inexammode(){
+  ((bool (*)(void ))_api_base[22])();
+}

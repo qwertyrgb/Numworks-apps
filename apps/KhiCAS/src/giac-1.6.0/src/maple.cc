@@ -24,14 +24,69 @@ using namespace std;
 #include <cmath>
 #include <cstdlib>
 #include <stdio.h>
+
 #if !defined GIAC_HAS_STO_38 && !defined NSPIRE && !defined FXCG 
 #include <fstream>
 #endif
+
 #if !defined HAVE_NO_SYS_TIMES_H && defined HAVE_SYS_TIME_H
 #include <fcntl.h>
 #include <sys/time.h>
 #include <time.h>
-#endif
+#else 
+#if 0 // defined VISUALC || defined __MINGW_H
+
+#include <sys/timeb.h>
+#include <sys/types.h>
+#include <winsock2.h>
+
+int gettimeofday(struct timeval* t,void* timezone);
+
+#define __need_clock_t
+
+/* Structure describing CPU time used by a process and its children.  */
+struct tms  {
+  clock_t tms_utime;          /* User CPU time.  */
+  clock_t tms_stime;          /* System CPU time.  */
+  
+  clock_t tms_cutime;         /* User CPU time of dead children.  */
+  clock_t tms_cstime;         /* System CPU time of dead children.  */
+};
+
+/* Store the CPU time used by this process and all its
+   dead children (and their dead children) in BUFFER.
+   Return the elapsed real time, or (clock_t) -1 for errors.
+   All times are in CLK_TCKths of a second.  */
+clock_t times (struct tms *__buffer);
+
+typedef long long suseconds_t ;
+
+int gettimeofday(struct timeval* t,void* timezone)
+{       
+  struct _timeb timebuffer;
+  _ftime( &timebuffer );
+  t->tv_sec=timebuffer.time;
+  t->tv_usec=1000*timebuffer.millitm;
+  return 0;
+}
+
+double clock(){
+  struct _timeb timebuffer;
+  _ftime( &timebuffer );
+  return timebuffer.time*1e6+1000*timebuffer.millitm;
+}
+
+clock_t times (struct tms *__buffer) {
+  __buffer->tms_utime = clock();
+  __buffer->tms_stime = 0;
+  __buffer->tms_cstime = 0;
+  __buffer->tms_cutime = 0;
+  return __buffer->tms_utime;
+}
+#define HAVE_SYS_TIME_H
+#endif // VISUALC || MINGW
+#endif // !defined HAVE_NO_SYS_TIMES_H && defined HAVE_SYS_TIME_H
+
 // #include <sys/resource.h>
 // #include <unistd.h>
 #include "sym2poly.h"
@@ -426,10 +481,38 @@ namespace giac {
   }
 
 #else // KHICAS
-  
+
+
+  double get_realtime(){ 
+#if !defined HAVE_NO_SYS_TIMES_H && defined HAVE_SYS_TIME_H
+    struct timeval t;
+    gettimeofday(&t, NULL);
+    t.tv_sec -= (2021 - 1970)*24*365*3600; // substract 2021, in order to loose less precision when doing a difference of get_realtime()
+    return ((double)t.tv_usec + ((double)t.tv_sec*1e6)) ;
+#else
+    return 0;
+#endif
+  }
+
+  const double realtime_init(get_realtime());
+  double realtime(){
+    double d= get_realtime()-realtime_init;
+    return d*1e-6;
+  }
+
+  cpureal_t clock_realtime(){
+    cpureal_t ans={CLOCK()*1e-6,realtime()};
+    return ans;
+  }
+
   gen _time(const gen & a,GIAC_CONTEXT){
     if ( a.type==_STRNG && a.subtype==-1) return  a;
     if (a.type==_VECT && a.subtype==_SEQ__VECT){
+#if defined VISUALC || defined __MINGW_H
+    struct _timeb timebuffer;
+    _ftime(&timebuffer);
+    return timebuffer.time+double(timebuffer.millitm)/1000;
+#endif
 #ifdef GIAC_HAS_STO_38
       return PrimeGetNow()/1000.;
 #endif
@@ -483,6 +566,28 @@ namespace giac {
     double t1=emcctime();
     eval(a,level,contextptr);
     return (emcctime()-t1)/1e6;
+#endif
+#if defined VISUALC || defined __MINGW_H
+    struct _timeb timebuffer0,timebuffer1;
+    _ftime(&timebuffer0);
+    for (;i<1000;){ // do it 10 times more
+      for (;i<ntimes;++i){
+	eval(a,level,contextptr);
+      }
+      _ftime(&timebuffer1);
+      delta=(timebuffer1.time-timebuffer0.time)+double(timebuffer1.millitm-timebuffer0.millitm)/1000;
+      if (delta>0.1)
+	break;
+      if (delta>0.05) // max wait time will be 2 seconds
+	ntimes *= 2;
+      else {
+	if (delta>0.02) 
+	  ntimes *= 5;
+	else
+	  ntimes *= 10;
+      }
+    }
+    return (delta/ntimes);
 #endif
 #if defined(__APPLE__) || defined(PNACL)
     unsigned u1=CLOCK();
@@ -1021,7 +1126,7 @@ namespace giac {
     gen tmp(_exp2pow(_lin(recursive_normal(g,contextptr),contextptr),contextptr));
     vecteur l(lop(tmp,at_arg));
     if (!l.empty()){
-      vecteur lp=*apply(l,gen_feuille)._VECTptr;
+      vecteur lp=*giac::apply(l,gen_feuille)._VECTptr;
       lp=*apply(lp,contextptr,arg_CPLX)._VECTptr;
       tmp=subst(tmp,l,lp,false,contextptr);
     }
@@ -1123,6 +1228,11 @@ namespace giac {
       if (s>1 && v[1]==gen("Unquoted",contextptr)){
 	for (int i=2;i<s;++i)
 	  fprintf(f,"%s",v[i].type==_STRNG?v[i]._STRNGptr->c_str():unquote(v[i].print(contextptr)).c_str());
+      }
+      else if (s>1 && v[1].type==_STRNG && v[1]._STRNGptr->size()==0){
+	for (int i=2;i<s;++i)
+	  fprintf(f,"%s",v[i].type==_STRNG?v[i]._STRNGptr->c_str():unquote(v[i].print(contextptr)).c_str());
+	fprintf(f,"\n");
       }
       else {
 	for (int i=1;i<s;++i)
@@ -1444,6 +1554,10 @@ namespace giac {
   static const char _reverse_rsolve_s []="reverse_rsolve";
   static define_unary_function_eval (__reverse_rsolve,&_reverse_rsolve,_reverse_rsolve_s);
   define_unary_function_ptr5( at_reverse_rsolve ,alias_at_reverse_rsolve,&__reverse_rsolve,0,true);
+
+  static const char _berlekamp_massey_s []="berlekamp_massey";
+  static define_unary_function_eval (__berlekamp_massey,&_reverse_rsolve,_berlekamp_massey_s);
+  define_unary_function_ptr5( at_berlekamp_massey ,alias_at_berlekamp_massey,&__berlekamp_massey,0,true);
 
   // Approx fft or exact if args=poly1,omega,n
   gen fft(const gen & g_orig,int direct,GIAC_CONTEXT){
@@ -2838,7 +2952,7 @@ namespace giac {
     vecteur uv(gen2vecteur(u));
     int uvs=int(uv.size());
     vecteur initcond;
-    aplatir(*apply(initcond0,equal2diff)._VECTptr,initcond);
+    aplatir(*giac::apply(initcond0,equal2diff)._VECTptr,initcond);
     gen f=apply(f0,equal2diff);
     if (n.type!=_IDNT){
       identificateur N(" rsolve_N");
@@ -3229,6 +3343,9 @@ namespace giac {
     }
     if (is_greater(0,g,context0))
       return -cpp_convert_2(-g,contextptr);
+#ifdef BF2GMP_H
+    return mpz_get_ui(*h._ZINTptr);
+#else
     unsigned int lo, hi;
     mpz_t tmp;
     mpz_init( tmp );
@@ -3239,7 +3356,8 @@ namespace giac {
     mpz_clear( tmp );
     longlong i=(((unsigned long long)hi) << 32) + lo;
     return i;
-#endif
+#endif // BF2GMP
+#endif // GMP_REPLACEMENTS
   }
 
   double cpp_convert_1(const gen & g,GIAC_CONTEXT){

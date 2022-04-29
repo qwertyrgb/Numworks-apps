@@ -10,7 +10,7 @@
 #ifdef __cplusplus
 #define EXTERNC extern "C"
 #else
-#define EXTERNC
+#define EXTERNC extern
 #endif
 
 #define LCD_WIDTH 320
@@ -18,6 +18,7 @@
 
 #define EXTAPP_RAM_FILE_SYSTEM 0
 #define EXTAPP_FLASH_FILE_SYSTEM 1
+#define EXTAPP_BOTH_FILE_SYSTEM 2
 
 #define SCANCODE_Left ((uint64_t)1 << 0)
 #define SCANCODE_Up ((uint64_t)1 << 1)
@@ -251,6 +252,13 @@ EXTERNC const char * extapp_fileRead(const char * filename, size_t *len, int sto
 EXTERNC bool extapp_fileWrite(const char * filename, const char * content, size_t len, int storage);
 EXTERNC void extapp_lockAlpha();
 EXTERNC void extapp_resetKeyboard();
-EXTERNC int extapp_getKey(bool allowSuspend, bool *alphaWasActive);
+EXTERNC int extapp_getKey(int allowSuspend, bool *alphaWasActive);
+EXTERNC int extapp_restorebackup(int mode); // currently works only with mode==-1 to restore scriptstore after exam mode
 
+EXTERNC  bool extapp_erasesector(void * ptr);
+EXTERNC  bool extapp_writesector(unsigned char * dest,const unsigned char * data,size_t length);
+EXTERNC  bool extapp_inexammode();
+EXTERNC uint32_t _heap_size;
+EXTERNC void *_heap_base;
+EXTERNC void *_heap_ptr;
 #endif
