@@ -58,8 +58,6 @@ void console_output(const char *,int);
 const char * read_file(const char * filename);
 bool file_exists(const char * filename);
 
-
-#if 0
 const char numpy_script[]=R"(import linalg
 import math
 class array: 
@@ -284,7 +282,6 @@ mp_lexer_t * mp_lexer_new_from_file(const char * filename) {
   else
     mp_raise_OSError(MP_ENOENT);
 }
-#endif
 
 mp_import_stat_t mp_import_stat(const char *path) {
   if (strcmp(path,"numpy.py")==0 || file_exists(path)) {
@@ -547,6 +544,10 @@ int micropy_eval(const char * str){
 #endif
   }
   return 0;
+}
+
+void raisememerr(){
+  nlr_raise(mp_obj_new_exception_msg(&mp_type_ValueError, "Memory error"));
 }
 
 #ifndef MICROPY_LIB
