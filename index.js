@@ -391,6 +391,11 @@ angular.module('nwas', ['ngSanitize', 'pascalprecht.translate']).controller('mai
         let archive = await buildArchive($scope.selectedApps, $scope.wallpaper, $scope.customFiles);
         console.log("Archive", archive);
 
+        // Add error when the destination address is bigger than the flash memory (8MB-2MB=6Mo, 0x90800000)
+        if (archive.length > 0x90800000 - 0x90200000) {
+          throw Error($translate.instant("TOO_MUCH_DATA"));
+        }
+
         if (archive.length > 0x90400000 - 0x90200000 && dfu.findDeviceDfuInterfaces(selectedDevice).length == 1 && selectedDevice.productName == 'Upsilon Calculator') {
           // It's a version of upsilon with the bootloader, but the dfu is executed from a slot, so a part of the flash memory is locked
           throw Error($translate.instant("TOO_BIG_FILES"))
@@ -407,6 +412,10 @@ angular.module('nwas', ['ngSanitize', 'pascalprecht.translate']).controller('mai
       $scope.$apply(function() {
         if(error.message != undefined && error.message.match("Address .*? outside of memory map")) {
           $scope.error = $translate.instant("TOO_MUCH_FILES");
+        }
+        // Handle Unable to claim interface error
+        else if(error.message != undefined && error.message.match("Unable to claim interface")) {
+          $scope.error = $translate.instant("UNABLE_TO_CLAIM_INTERFACE");
         }
         else {
           $scope.error = error;
@@ -496,7 +505,9 @@ angular.module('nwas', ['ngSanitize', 'pascalprecht.translate']).controller('mai
       CROP_IMAGE_SAVE: "Save",
       CANCEL: "Cancel",
       CONTINUE: "Continue",
-      TOO_BIG_FILES: "You are writing a large amount of files to your calculator. If you are using a recent version of Upsilon, you must go through the bootloader (reset button on the back) to make sure that the files will not be written over running code."
+      TOO_BIG_FILES: "You are writing a large amount of files to your calculator. If you are using a recent version of Upsilon, you must go through the bootloader (reset button on the back) to make sure that the files will not be written over running code.",
+      UNABLE_TO_CLAIM_INTERFACE: "Unable to claim interface. Please make sure that no other tab or application is using the calculator.",
+      TOO_MUCH_DATA: "You are writing too much data to your calculator. Please make sure that you are not writing more than 6MB of data. Try to remove some files or apps.",
     })
     .translations('fr', {
       TITLE: 'Dépôt d\'application N0110 non officiel',
@@ -527,7 +538,9 @@ angular.module('nwas', ['ngSanitize', 'pascalprecht.translate']).controller('mai
       CROP_IMAGE_TITLE: "Recadrer le fond d'écran",
       CROP_IMAGE_SAVE: "Sauvegarder",
       CANCEL: "Annuler",
-      TOO_BIG_FILES: "Vous écrivez une grande quantité de fichiers sur votre calculatrice. Si vous utilisez une version récente d'Upsilon, vous devez passer par le bootloader (bouton de réinitialisation à l'arrière) pour vous assurer que les fichiers ne seront pas écrits dans du code en cours d'exécution."
+      TOO_BIG_FILES: "Vous écrivez une grande quantité de fichiers sur votre calculatrice. Si vous utilisez une version récente d'Upsilon, vous devez passer par le bootloader (bouton de réinitialisation à l'arrière) pour vous assurer que les fichiers ne seront pas écrits dans du code en cours d'exécution.",
+      UNABLE_TO_CLAIM_INTERFACE: "Impossible de réclamer l'interface. Veuillez vous assurer qu'aucun autre onglet ou application n'utilise la calculatrice.",
+      TOO_MUCH_DATA: "Vous écrivez trop de données sur votre calculatrice. Veuillez vous assurer que vous n'écrivez pas plus de 6Mo de données. Essayez de supprimer des fichiers ou des applications.",
     })
     .registerAvailableLanguageKeys(['en', 'fr'], {
       'en_*': 'en',
