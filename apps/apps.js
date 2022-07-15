@@ -7,6 +7,7 @@ angular.module('nwas').service('apps', function() {
     { name: "Nofrendo", description: {en: "NES emulator", fr: "Émulateur NES"} },
     { name: "Peanut-GB", description: {en: "GameBoy emulator", fr: "Émulateur GameBoy"} },
     { name: "HexEdit", description: {en: "Hexadecimal editor", fr: "Éditeur hexadécimal"} },
+    { name: "BadApple", description: {en: "The Bad Apple", fr: "Démo Bad Apple"} },
     { name: "Rickroll", description: {en: "The Rickroll", fr: "Le Rickroll"} },
     { name: "UnitCircle", description: {en: "Unit circle", fr: "Cercle trigonométrique"} },
     { name: "CHIP-8", description: {en: "CHIP-8 interpreter", fr: "Interpréteur CHIP-8"} },
