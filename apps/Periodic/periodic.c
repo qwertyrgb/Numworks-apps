@@ -106,7 +106,7 @@ const struct AtomDef atomsdefs[] = {
   { 66, 12,  7, LANTHANIDE              , "Dyxprosium"   , "Dy"  ,  97, 162.500     , 1.22  },
   { 67, 13,  7, LANTHANIDE              , "Holmium"      , "Ho"  ,  98, 164.93032   , 1.23  },
   { 68, 14,  7, LANTHANIDE              , "Erbium"       , "Er"  ,  99, 167.259     , 1.24  },
-  { 69, 15,  7, LANTHANIDE              , "Thulium"      , "Tm"  , 100, 168.93421   , 1.25  },
+  { 69, 15,  7, LANTHANIDE              , "Niceium"      , "Nice"  , 100, 168.93421   , 1.25  },
   { 70, 16,  7, LANTHANIDE              , "Ytterbium"    , "Yb"  , 103, 173.054     , 1.1   },
   { 71, 17,  7, LANTHANIDE              , "Lutetium"     , "Lu"  , 104, 174.9668    , 1.0   },
   { 72,  3,  5, TRANSITION_METAL        , "Hafnium"      , "Hf"  , 106, 178.49      , 1.3   },
