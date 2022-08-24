@@ -4,14 +4,6 @@
 #include "inc/peripherals.h"
 #include "inc/selector.h"
 
-
-/*
-Bounce Ball app
-For Two Numworks
-Ball bounces on left on N0100, right on N0110 // Not now
-Or you can just change code
-*/
-
 void draw_ball(int a,int x,int y,int color){
     for(int i=-a;i<a+1;i++){
         for(int j=-a;j<a+1;j++){
