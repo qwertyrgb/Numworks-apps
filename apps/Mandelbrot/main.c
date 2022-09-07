@@ -7,7 +7,7 @@
 #include "inc/selector.h"
 #include <complex.h>
 #include <stdlib.h>
-//TODO: add square (grin) select pixel to center
+//TODO: add square (green) select pixel to center
 
 char* concat(const char *s1, const char *s2) {
     char *result = malloc(strlen(s1) + strlen(s2) + 1);
@@ -119,7 +119,7 @@ int key=extapp_getKey(true, NULL);
 	} else if(key == KEY_SHIFT_LEFT){
 	xpos-=0.5/Zoom;
 	} else if(key == KEY_SHIFT_RIGHT){
-	xpos+=0.5/Zoom
+	xpos+=0.5/Zoom;
 	} else if(key == KEY_CHAR_PLUS) {
 		xpos+=0.875/Zoom;
 		ypos-=0.6125/Zoom;
