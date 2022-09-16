@@ -2,7 +2,7 @@
 
 angular.module('nwas').service('apps', function() {
   return [
-    { name: "NES TAH", description: {en: "NES emulator", fr: "Émulateur NES"} },
+    { name: "NES TAH", description: {en: "TAHrtiNES emulator", fr: "Émulateur TAHrtiNES"} },
     { name: "Playboy", description: {en: "It's actually GameBoy", fr: "Non, en fait c'est GameBoy"} },
     { name: "HexEdit", description: {en: "Hexadecimal editor", fr: "Éditeur hexadécimal"} },
     { name: "Rickroll", description: {en: "The Rickroll", fr: "Le Rickroll"} },
