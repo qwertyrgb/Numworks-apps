@@ -478,7 +478,7 @@ angular.module('nwas', ['ngSanitize', 'pascalprecht.translate']).controller('mai
     .translations('en', {
       TITLE: 'Tah les applis sur votre calc',
       LEAD: 'Ici le shirAko vous aide à installer des applis sur votre calc.',
-      FIRMWARE: 'La liste de gens qui ont fait confiance à shirAcode pour le divertissement sur Numworks, c\'est ',
+      FIRMWARE: 'Google, c\'est ',
       DISCLAIM: 'Pour voir la leuliste des jeux, observez ',
       HERE: 'ceci.',      
       NO_WEB_USB: 'Votre navigateur ne supporte pas WebUSB, veuillez utiliser',
@@ -512,7 +512,7 @@ angular.module('nwas', ['ngSanitize', 'pascalprecht.translate']).controller('mai
     .translations('fr', {
       TITLE: 'Tah les applis sur votre calc',
       LEAD: 'Ici le shirAko vous aide à installer des applis sur votre calc.',
-      FIRMWARE: 'La liste de gens qui ont fait confiance à shirAcode pour le divertissement sur Numworks, c\'est ',
+      FIRMWARE: 'Google, c\'est ',
       DISCLAIM: 'Pour voir la leuliste des jeux, observez ',
       HERE: 'ceci.',      
       NO_WEB_USB: 'Votre navigateur ne supporte pas WebUSB, veuillez utiliser',
