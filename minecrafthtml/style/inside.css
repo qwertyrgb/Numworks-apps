@@ -1,0 +1,35 @@
+html{
+    background-image: url('../img/inside.png');
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.trapdoor{
+    height: 160px;
+    width: 400px;
+    margin-top: 540px;
+    margin-left: 1000px;
+}
+p{
+    margin-left: 900px;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: white;
+}
+.a1{
+    height: 160px;
+    width: 400px;
+}
+.ladder{
+    margin-left: 550px;
+    position: absolute;
+    height: 800px;
+    width: 200px;
+}
+.a2{
+    height: 800px;
+    width: 200px;
+}

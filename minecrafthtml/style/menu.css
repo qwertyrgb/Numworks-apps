@@ -1,0 +1,32 @@
+body{
+    background-image: url('../img/house.png');
+	 background-size: 100%;
+	 background-repeat: no-repeat;
+}
+.door{
+    height: 310px;
+    width: 150px;
+    margin-top: 230px;
+    margin-left: 870px;
+}
+p{
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: white;
+}
+.a{
+    height: 310px;
+    width: 150px;
+}
+.golem{
+    height: 30px;
+    width: 60px;
+    margin-top: 90px;
+    margin-left: 1740px;
+}
+.a2{
+    height: 130px;
+    width: 70px;
+}

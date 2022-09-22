@@ -1,0 +1,13 @@
+html{
+    background-image: url('../img/room.png');
+}
+p{
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: white;
+}
+a{
+    color: white;
+}

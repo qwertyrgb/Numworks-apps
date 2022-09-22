@@ -1,0 +1,36 @@
+html{
+    background-image: url('../img/basement.png');
+    background-size: cover;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+p{
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: white;
+}
+.path1{
+    margin-top: 120px;
+    margin-left: 360px;
+    height: 600px;
+    width: 290px;
+}
+.a1{
+    height: 600px;
+    width: 290px;
+}
+.path2{
+    margin-top: 140px;
+    margin-right: 600px;
+    height: 550px;
+    width: 250px;
+}
+.a2{
+    height: 550px;
+    width: 250px;
+}

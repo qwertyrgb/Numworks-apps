@@ -1,0 +1,23 @@
+html{
+    background-image: url('../img/diamond.png');
+}
+p{
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: white;
+}
+a{
+    color: white;
+}
+.diamond{
+    height: 50px;
+    width: 55px;
+    margin-top: 240px;
+    margin-left: 925px;
+}
+.a{
+    height: 50px;
+    width: 55px;
+}

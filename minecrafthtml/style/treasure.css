@@ -1,0 +1,23 @@
+html{
+    background-image: url('../img/treasure.png');
+}
+p{
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: white;
+}
+a{
+    color: white;
+}
+.chest{
+    height: 180px;
+    width: 170px;
+    margin-top: 220px;
+    margin-left: 860px;
+}
+.a{
+    height: 180px;
+    width: 170px;
+}
