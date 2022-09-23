@@ -5,7 +5,6 @@ angular.module('nwas').service('apps', function() {
     { name: "NES TAH", description: {en: "TAHrtiNES emulator", fr: "Émulateur TAHrtiNES"} },
     { name: "Playboy", description: {en: "It's actually GameBoy", fr: "Non, en fait c'est GameBoy"} },
     { name: "Gamesave", description: {en: "TEST: NE PAS UTILISER", fr: "TEST: NE PAS UTILISER"} },
-    { name: "HexEdit", description: {en: "Hexadecimal editor", fr: "Éditeur hexadécimal"} },
     { name: "Rickroll", description: {en: "The Rickroll", fr: "Le Rickroll"} },
     { name: "Image", description: {en: "An image", fr: "Une image"} },
     { name: "Ball", description: {en: "Haha ballz", fr: "Un objet en forme sphérique qui rebondit sur les bords de votre calculatrice"} },
