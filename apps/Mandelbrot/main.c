@@ -8,7 +8,7 @@
 #include <complex.h>
 #include <stdlib.h>
 //TODO: add square (green) select pixel to center
-//TODO: Maybe first float to speed?
+//TODO: Maybe first float to speed? (is simulated complex faster than complex?)
 
 char* concat(const char *s1, const char *s2) {
     char *result = malloc(strlen(s1) + strlen(s2) + 1);
