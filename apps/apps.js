@@ -10,5 +10,6 @@ angular.module('nwas').service('apps', function() {
     { name: "Ball", description: {en: "Haha ballz", fr: "Un objet en forme sphérique qui rebondit sur les bords de votre calculatrice"} },
     { name: "Mandelbrot", description: {en: "The Mandelbrot set fractal", fr: "Visionneur de la fracale de Mandelbrot, zoom jusqu'a 2**31 fois"} },
     { name: "Golly", description: {en: "Conway's game of life", fr: "Golly"} }
+    { name: "Video", description: {en: "Video rick", fr: "rick video"} }
   ];
 });
